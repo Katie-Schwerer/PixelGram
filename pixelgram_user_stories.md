@@ -21,4 +21,16 @@
 2. **Storing Images:** The user should be able to access everyone's photos, including their own images.
 
 ## Integrate External API User Stories
-1. **Download API** As a user, 
+1. **Download API:** As a user, I want them to download an image on the view screen so they can download the pattern.
+
+## Implement Settings Menu
+1. **Settings Location:** As a user, I want to access a settings menu from any screen at my own convenience.
+2. **Organization Settings:** As a user, I want to see categorized sections in the settings menu.
+3. 
+
+## Implement Settings Screen
+1. **Dark Mode:** As a user, I want to create a way to enable dark mode in the settings screen so that I can keep my account secure.
+2. **Update Email and Password:** As a user, I want to update my email and password on the settings screen so that I can keep my account secure.
+
+## Implement Notifications
+1. **New Features:** As a user, I want to receive notifications about  new features so that I can explore and benefit from them.
