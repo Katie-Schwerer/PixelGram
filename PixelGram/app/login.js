@@ -3,7 +3,7 @@ import { View, Image, Alert, Text, TextInput, TouchableOpacity } from "react-nat
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack, useRouter } from "expo-router";
-import { COLORS, icons, SHADOWS } from "../constants";
+import { COLORS, icon, SHADOWS } from "../constants";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -65,7 +65,7 @@ const Login = () => {
           }}
         >
           <Image
-            source={icons.menu}
+            source={icon.pixel}
             style={{
               width: 50,
               height: 50,
