@@ -10,7 +10,7 @@ const ScreenHeader = ({ header, image }) => {
     return (
         <>
             <View style={styles.btn}>
-                <View style={styles.btnContainer}>
+                <View >
                     <Text style={styles.header}>{header}</Text>
                 </View>
                 <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings")}>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingHorizontal: 55,
+        paddingHorizontal: 15,
         width: '100vw',
         height: '10%',
         backgroundColor: COLORS.primary,
@@ -50,5 +50,6 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.small / 1.25,
         justifyContent: "center",
         alignItems: "center",
+        marginTop: '1rem',
     },
 });
