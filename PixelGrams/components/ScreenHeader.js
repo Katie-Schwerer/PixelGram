@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { TouchableOpacity, View, Image, StyleSheet, Text } from "react-native";
-import icons from "../constants/theme";
+//import icons from "../constants/theme";
 import { COLORS, SIZES } from "../constants/theme";
 import { Settings } from 'lucide-react-native';
 
@@ -14,7 +14,7 @@ const ScreenHeader = ({ header, image }) => {
                     <Text style={styles.header}>{header}</Text>
                 </View>
                 <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings")}>
-                    <Settings color="white" size="35" />
+                    <Settings color="white" size="35" style={styles.image} />
                 </TouchableOpacity>
             </View>
         </>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 55,
         width: '100vw',
-        height: '15%',
+        height: '10%',
         backgroundColor: COLORS.primary,
     },
     header: {
@@ -39,12 +39,9 @@ const styles = StyleSheet.create({
         fontSize: 35,
         resizeMode: 'contain',
         marginTop: '1rem',
-        paddingHorizontal: 70,
     },
     image: {
-        width: 30,
-        height: 30,
-        resizeMode: 'contain',
+        marginLeft: SIZES.medium,
     },
     btnContainer: {
         width: 40,
