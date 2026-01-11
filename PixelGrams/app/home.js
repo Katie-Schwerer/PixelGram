@@ -11,7 +11,7 @@ import { Plus } from 'lucide-react-native';
 const Home = () => {
     return (
         <>
-            <ScreenHeader header="Home" image={icons.settings} />
+            <ScreenHeader header="Home" />
             <ScrollView showsVerticalScrollIndicator={false} >
                 <PixelFeed />
             </ScrollView>

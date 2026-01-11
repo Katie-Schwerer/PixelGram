@@ -14,6 +14,7 @@ import {
     TouchableOpacity
 } from "react-native";
 
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Heart, Share2 } from 'lucide-react-native';
 import { COLORS, SIZES } from "../constants";
 

@@ -6,16 +6,22 @@ import { Settings } from 'lucide-react-native';
 
 const ScreenHeader = ({ header, image }) => {
     const router = useRouter();
-
+    console.log("Header Image:", image);
     return (
         <>
             <View style={styles.btn}>
                 <View >
                     <Text style={styles.header}>{header}</Text>
                 </View>
-                <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings")}>
-                    <Settings color="white" size="35" style={styles.image} />
-                </TouchableOpacity>
+                {image !== undefined ? (
+                    <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/home")}>
+                        {image}
+                    </TouchableOpacity>
+                ) : (
+                    <TouchableOpacity style={styles.btnContainer} onPress={() => router.push("/settings")}>
+                        <Settings color="white" size={35} style={styles.image} />
+                    </TouchableOpacity>
+                )}
             </View>
         </>
     )
