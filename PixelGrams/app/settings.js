@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StyleSheet } fr
 import { useRouter } from "expo-router";
 import { COLORS, SIZES } from "../constants";
 import ScreenHeader from "../components/ScreenHeader";
-import { Heart, Bell, ArrowBigLeft } from 'lucide-react-native';
+import { Heart, Bell, ArrowBigLeft, Moon, LogOut } from 'lucide-react-native';
 
 const Settings = () => {
     const router = useRouter();
@@ -20,9 +20,19 @@ const Settings = () => {
                     <Text style={styles.settingText}>Favorites</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.settingItem}>
+                <TouchableOpacity style={styles.settingItem} onPress={() => router.push("/settings/Notifications")}>
                     <Bell color={COLORS.primary} size={24} />
                     <Text style={styles.settingText}>Notifications</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.settingItem} onPress={() => router.push("/settings/DarkMode")}>
+                    <Moon color={COLORS.primary} size={24} />
+                    <Text style={styles.settingText}>Dark Mode</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.logout} onPress={() => router.push("/login")}>
+                    <LogOut color="black" size={24} />
+                    <Text style={styles.settingText}>Logout</Text>
                 </TouchableOpacity>
 
             </ScrollView>
@@ -41,6 +51,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: SIZES.medium,
         backgroundColor: COLORS.textbox,
+        borderRadius: SIZES.small,
+        marginBottom: SIZES.medium,
+    },
+    logout: {
+        backgroundColor: COLORS.logout,
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: SIZES.medium,
         borderRadius: SIZES.small,
         marginBottom: SIZES.medium,
     },

@@ -4,6 +4,7 @@ const COLORS = {
     tertiary: "#FF7754",
 
     textbox: "#F5F5F5",
+    logout: "#f35e5ec2",
   
     gray: "#83829A",
     gray2: "#C1C0C8",
